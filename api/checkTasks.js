@@ -53,7 +53,7 @@ export default async function handler(req, res) {
     // Send email
     await axios.post("https://mail-api-iuw1zw.fly.dev/sendMail", {
       to: "anubhavsingh2106@gmail.com",
-      subject: "⚠ Reminder: Tasks Pending",
+      subject: "⚠ important hai nahi hua abhi bhi saale ",
       websiteName: "Task Manager",
       message: `
         <h3>🚨Saale aaj ka task nahi hua motee</h3>
