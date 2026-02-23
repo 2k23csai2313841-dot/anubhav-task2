@@ -27,9 +27,9 @@ export default async function handler(req, res) {
     // Format HTML list
     const taskListHTML = pendingTasks
       .map((t) =>
-        t === "Workout"
-          ? `<li>➡️ tere se aaj workout suru nahi hua mote jaa kar  </li>`
-          : `<li>➡️ ${t.text}</li>`,
+        t.text === "Workout"
+          ? `<li>➡️ tere se aaj workout suru nahi hua mote jaa kar  </li>` 
+          :`<li>➡️ ${t.text}</li>`,
       )
       .join("");
 
@@ -73,3 +73,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message });
   }
 }
+
+
+
